@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DB4D1ACF1BC218AE001F8B87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1ACE1BC218AE001F8B87 /* AppDelegate.swift */; };
-		DB4D1AD11BC218AE001F8B87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1AD01BC218AE001F8B87 /* ViewController.swift */; };
+		DB4D1AD11BC218AE001F8B87 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1AD01BC218AE001F8B87 /* ScannerViewController.swift */; };
 		DB4D1AD41BC218AE001F8B87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4D1AD21BC218AE001F8B87 /* Main.storyboard */; };
 		DB4D1AD61BC218AE001F8B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4D1AD51BC218AE001F8B87 /* Assets.xcassets */; };
 		DB4D1AD91BC218AE001F8B87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4D1AD71BC218AE001F8B87 /* LaunchScreen.storyboard */; };
 		DB4D1AE41BC218AE001F8B87 /* Barcode_TwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1AE31BC218AE001F8B87 /* Barcode_TwoTests.swift */; };
 		DB4D1AEF1BC218AE001F8B87 /* Barcode_TwoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1AEE1BC218AE001F8B87 /* Barcode_TwoUITests.swift */; };
+		DB4D1B081BC4598D001F8B87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1B071BC4598D001F8B87 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +35,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB4D1ACB1BC218AE001F8B87 /* Barcode Two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Barcode Two.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4D1ACB1BC218AE001F8B87 /* VIN Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4D1ACE1BC218AE001F8B87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB4D1AD01BC218AE001F8B87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB4D1AD01BC218AE001F8B87 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		DB4D1AD31BC218AE001F8B87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB4D1AD51BC218AE001F8B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4D1AD81BC218AE001F8B87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB4D1ADA1BC218AE001F8B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB4D1ADF1BC218AE001F8B87 /* Barcode TwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Barcode TwoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4D1ADF1BC218AE001F8B87 /* VIN Scanner.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIN Scanner.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4D1AE31BC218AE001F8B87 /* Barcode_TwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode_TwoTests.swift; sourceTree = "<group>"; };
 		DB4D1AE51BC218AE001F8B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB4D1AEA1BC218AE001F8B87 /* Barcode TwoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Barcode TwoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4D1AEA1BC218AE001F8B87 /* VIN Scanner.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIN Scanner.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4D1AEE1BC218AE001F8B87 /* Barcode_TwoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode_TwoUITests.swift; sourceTree = "<group>"; };
 		DB4D1AF01BC218AE001F8B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB4D1B071BC4598D001F8B87 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,9 @@
 		DB4D1AC21BC218AE001F8B87 = {
 			isa = PBXGroup;
 			children = (
-				DB4D1ACD1BC218AE001F8B87 /* Barcode Two */,
-				DB4D1AE21BC218AE001F8B87 /* Barcode TwoTests */,
-				DB4D1AED1BC218AE001F8B87 /* Barcode TwoUITests */,
+				DB4D1ACD1BC218AE001F8B87 /* VIN Scanner */,
+				DB4D1AE21BC218AE001F8B87 /* VIN ScannerTests */,
+				DB4D1AED1BC218AE001F8B87 /* VIN ScannerUITests */,
 				DB4D1ACC1BC218AE001F8B87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,50 +89,54 @@
 		DB4D1ACC1BC218AE001F8B87 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB4D1ACB1BC218AE001F8B87 /* Barcode Two.app */,
-				DB4D1ADF1BC218AE001F8B87 /* Barcode TwoTests.xctest */,
-				DB4D1AEA1BC218AE001F8B87 /* Barcode TwoUITests.xctest */,
+				DB4D1ACB1BC218AE001F8B87 /* VIN Scanner.app */,
+				DB4D1ADF1BC218AE001F8B87 /* VIN Scanner.xctest */,
+				DB4D1AEA1BC218AE001F8B87 /* VIN Scanner.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB4D1ACD1BC218AE001F8B87 /* Barcode Two */ = {
+		DB4D1ACD1BC218AE001F8B87 /* VIN Scanner */ = {
 			isa = PBXGroup;
 			children = (
 				DB4D1ACE1BC218AE001F8B87 /* AppDelegate.swift */,
-				DB4D1AD01BC218AE001F8B87 /* ViewController.swift */,
+				DB4D1AD01BC218AE001F8B87 /* ScannerViewController.swift */,
 				DB4D1AD21BC218AE001F8B87 /* Main.storyboard */,
+				DB4D1B071BC4598D001F8B87 /* HomeViewController.swift */,
 				DB4D1AD51BC218AE001F8B87 /* Assets.xcassets */,
 				DB4D1AD71BC218AE001F8B87 /* LaunchScreen.storyboard */,
 				DB4D1ADA1BC218AE001F8B87 /* Info.plist */,
 			);
+			name = "VIN Scanner";
 			path = "Barcode Two";
 			sourceTree = "<group>";
 		};
-		DB4D1AE21BC218AE001F8B87 /* Barcode TwoTests */ = {
+		DB4D1AE21BC218AE001F8B87 /* VIN ScannerTests */ = {
 			isa = PBXGroup;
 			children = (
 				DB4D1AE31BC218AE001F8B87 /* Barcode_TwoTests.swift */,
 				DB4D1AE51BC218AE001F8B87 /* Info.plist */,
 			);
+			name = "VIN ScannerTests";
 			path = "Barcode TwoTests";
 			sourceTree = "<group>";
 		};
-		DB4D1AED1BC218AE001F8B87 /* Barcode TwoUITests */ = {
+		DB4D1AED1BC218AE001F8B87 /* VIN ScannerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				DB4D1AEE1BC218AE001F8B87 /* Barcode_TwoUITests.swift */,
 				DB4D1AF01BC218AE001F8B87 /* Info.plist */,
 			);
+			name = "VIN ScannerUITests";
 			path = "Barcode TwoUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB4D1ACA1BC218AE001F8B87 /* Barcode Two */ = {
+		DB4D1ACA1BC218AE001F8B87 /* VIN Scanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB4D1AF31BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "Barcode Two" */;
+			buildConfigurationList = DB4D1AF31BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "VIN Scanner" */;
 			buildPhases = (
 				DB4D1AC71BC218AE001F8B87 /* Sources */,
 				DB4D1AC81BC218AE001F8B87 /* Frameworks */,
@@ -140,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = "Barcode Two";
+			name = "VIN Scanner";
 			productName = "Barcode Two";
-			productReference = DB4D1ACB1BC218AE001F8B87 /* Barcode Two.app */;
+			productReference = DB4D1ACB1BC218AE001F8B87 /* VIN Scanner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DB4D1ADE1BC218AE001F8B87 /* Barcode TwoTests */ = {
+		DB4D1ADE1BC218AE001F8B87 /* VIN ScannerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB4D1AF61BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "Barcode TwoTests" */;
+			buildConfigurationList = DB4D1AF61BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "VIN ScannerTests" */;
 			buildPhases = (
 				DB4D1ADB1BC218AE001F8B87 /* Sources */,
 				DB4D1ADC1BC218AE001F8B87 /* Frameworks */,
@@ -158,14 +164,14 @@
 			dependencies = (
 				DB4D1AE11BC218AE001F8B87 /* PBXTargetDependency */,
 			);
-			name = "Barcode TwoTests";
+			name = "VIN ScannerTests";
 			productName = "Barcode TwoTests";
-			productReference = DB4D1ADF1BC218AE001F8B87 /* Barcode TwoTests.xctest */;
+			productReference = DB4D1ADF1BC218AE001F8B87 /* VIN Scanner.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DB4D1AE91BC218AE001F8B87 /* Barcode TwoUITests */ = {
+		DB4D1AE91BC218AE001F8B87 /* VIN ScannerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB4D1AF91BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "Barcode TwoUITests" */;
+			buildConfigurationList = DB4D1AF91BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "VIN ScannerUITests" */;
 			buildPhases = (
 				DB4D1AE61BC218AE001F8B87 /* Sources */,
 				DB4D1AE71BC218AE001F8B87 /* Frameworks */,
@@ -176,9 +182,9 @@
 			dependencies = (
 				DB4D1AEC1BC218AE001F8B87 /* PBXTargetDependency */,
 			);
-			name = "Barcode TwoUITests";
+			name = "VIN ScannerUITests";
 			productName = "Barcode TwoUITests";
-			productReference = DB4D1AEA1BC218AE001F8B87 /* Barcode TwoUITests.xctest */;
+			productReference = DB4D1AEA1BC218AE001F8B87 /* VIN Scanner.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DB4D1AC61BC218AE001F8B87 /* Build configuration list for PBXProject "Barcode Two" */;
+			buildConfigurationList = DB4D1AC61BC218AE001F8B87 /* Build configuration list for PBXProject "VIN Scanner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -216,9 +222,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB4D1ACA1BC218AE001F8B87 /* Barcode Two */,
-				DB4D1ADE1BC218AE001F8B87 /* Barcode TwoTests */,
-				DB4D1AE91BC218AE001F8B87 /* Barcode TwoUITests */,
+				DB4D1ACA1BC218AE001F8B87 /* VIN Scanner */,
+				DB4D1ADE1BC218AE001F8B87 /* VIN ScannerTests */,
+				DB4D1AE91BC218AE001F8B87 /* VIN ScannerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,8 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4D1AD11BC218AE001F8B87 /* ViewController.swift in Sources */,
+				DB4D1AD11BC218AE001F8B87 /* ScannerViewController.swift in Sources */,
 				DB4D1ACF1BC218AE001F8B87 /* AppDelegate.swift in Sources */,
+				DB4D1B081BC4598D001F8B87 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,12 +288,12 @@
 /* Begin PBXTargetDependency section */
 		DB4D1AE11BC218AE001F8B87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB4D1ACA1BC218AE001F8B87 /* Barcode Two */;
+			target = DB4D1ACA1BC218AE001F8B87 /* VIN Scanner */;
 			targetProxy = DB4D1AE01BC218AE001F8B87 /* PBXContainerItemProxy */;
 		};
 		DB4D1AEC1BC218AE001F8B87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB4D1ACA1BC218AE001F8B87 /* Barcode Two */;
+			target = DB4D1ACA1BC218AE001F8B87 /* VIN Scanner */;
 			targetProxy = DB4D1AEB1BC218AE001F8B87 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -400,8 +407,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Barcode Two/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.Barcode-Two";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.VIN-Scanner";
+				PRODUCT_NAME = "VIN Scanner";
 			};
 			name = Debug;
 		};
@@ -411,8 +418,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Barcode Two/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.Barcode-Two";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.VIN-Scanner";
+				PRODUCT_NAME = "VIN Scanner";
 			};
 			name = Release;
 		};
@@ -423,8 +430,8 @@
 				INFOPLIST_FILE = "Barcode TwoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.Barcode-TwoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barcode Two.app/Barcode Two";
+				PRODUCT_NAME = "VIN Scanner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIN Scanner.app/VIN Scanner";
 			};
 			name = Debug;
 		};
@@ -435,8 +442,8 @@
 				INFOPLIST_FILE = "Barcode TwoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.Barcode-TwoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barcode Two.app/Barcode Two";
+				PRODUCT_NAME = "VIN Scanner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIN Scanner.app/VIN Scanner";
 			};
 			name = Release;
 		};
@@ -446,7 +453,7 @@
 				INFOPLIST_FILE = "Barcode TwoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.Barcode-TwoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "VIN Scanner";
 				TEST_TARGET_NAME = "Barcode Two";
 				USES_XCTRUNNER = YES;
 			};
@@ -458,7 +465,7 @@
 				INFOPLIST_FILE = "Barcode TwoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.ipad.Barcode-TwoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "VIN Scanner";
 				TEST_TARGET_NAME = "Barcode Two";
 				USES_XCTRUNNER = YES;
 			};
@@ -467,7 +474,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB4D1AC61BC218AE001F8B87 /* Build configuration list for PBXProject "Barcode Two" */ = {
+		DB4D1AC61BC218AE001F8B87 /* Build configuration list for PBXProject "VIN Scanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB4D1AF11BC218AE001F8B87 /* Debug */,
@@ -476,29 +483,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB4D1AF31BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "Barcode Two" */ = {
+		DB4D1AF31BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "VIN Scanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB4D1AF41BC218AE001F8B87 /* Debug */,
 				DB4D1AF51BC218AE001F8B87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		DB4D1AF61BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "Barcode TwoTests" */ = {
+		DB4D1AF61BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "VIN ScannerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB4D1AF71BC218AE001F8B87 /* Debug */,
 				DB4D1AF81BC218AE001F8B87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		DB4D1AF91BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "Barcode TwoUITests" */ = {
+		DB4D1AF91BC218AE001F8B87 /* Build configuration list for PBXNativeTarget "VIN ScannerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB4D1AFA1BC218AE001F8B87 /* Debug */,
 				DB4D1AFB1BC218AE001F8B87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

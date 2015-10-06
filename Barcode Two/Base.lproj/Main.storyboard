@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E3w-aF-tKO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
+        <scene sceneID="bD8-7m-vI0">
+            <objects>
+                <viewController id="E3w-aF-tKO" customClass="HomeViewController" customModule="Barcode_Two" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lms-ef-FOW"/>
+                        <viewControllerLayoutGuide type="bottom" id="UWU-3u-JXx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v2x-63-MDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XE-Mt-yxl">
+                                <rect key="frame" x="255" y="280" width="91" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Scan VIN"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueScanVin" id="Nve-QC-j7N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXL-FK-Ytw">
+                                <rect key="frame" x="20" y="327" width="560" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="tqb-gf-JSE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="oXL-FK-Ytw" secondAttribute="leading" id="JRq-pB-0u5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oXL-FK-Ytw" secondAttribute="trailing" id="Z6L-MZ-JTM"/>
+                            <constraint firstItem="oXL-FK-Ytw" firstAttribute="top" secondItem="1XE-Mt-yxl" secondAttribute="bottom" constant="8" id="eqa-3Z-7jE"/>
+                            <constraint firstItem="oXL-FK-Ytw" firstAttribute="centerX" secondItem="v2x-63-MDJ" secondAttribute="centerX" id="jls-Dh-m8i"/>
+                            <constraint firstItem="1XE-Mt-yxl" firstAttribute="centerY" secondItem="v2x-63-MDJ" secondAttribute="centerY" id="l59-M9-HBl"/>
+                            <constraint firstItem="1XE-Mt-yxl" firstAttribute="centerX" secondItem="v2x-63-MDJ" secondAttribute="centerX" id="vA1-iH-tdW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scannedVinLabel" destination="oXL-FK-Ytw" id="0OC-Z0-6DL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83q-f9-uFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327" y="357"/>
+        </scene>
+        <!--Scanner View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ScannerViewController" customModule="Barcode_Two" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +64,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-gJ-gZ7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="453"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yuf-7j-0IN">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Confirm" id="sPZ-9A-xPg">
+                                        <connections>
+                                            <segue destination="E3w-aF-tKO" kind="show" identifier="segueUnwindFromScanner" id="Syt-pH-eqA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UZN-If-rgz"/>
+                                    <barButtonItem title="Rescan" id="8ly-dG-Ohy">
+                                        <connections>
+                                            <action selector="didTapRescan:" destination="BYZ-38-t0r" id="M0L-Sh-i7C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIN Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hg-eE-cST">
+                                <rect key="frame" x="20" y="502" width="560" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OAk-gJ-gZ7" secondAttribute="trailing" constant="-20" id="3z4-CT-09V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yuf-7j-0IN" secondAttribute="trailing" constant="-20" id="A7X-e4-PQm"/>
+                            <constraint firstItem="Yuf-7j-0IN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Bcf-XB-QGm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4hg-eE-cST" secondAttribute="trailing" id="GBU-8Z-bWc"/>
+                            <constraint firstItem="OAk-gJ-gZ7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Wkn-39-zKs"/>
+                            <constraint firstItem="Yuf-7j-0IN" firstAttribute="top" secondItem="4hg-eE-cST" secondAttribute="bottom" constant="20" id="bIf-9n-6x9"/>
+                            <constraint firstItem="4hg-eE-cST" firstAttribute="top" secondItem="OAk-gJ-gZ7" secondAttribute="bottom" constant="50" id="ezy-x8-Qys"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="4hg-eE-cST" secondAttribute="leading" id="nzt-I8-3Wq"/>
+                            <constraint firstItem="OAk-gJ-gZ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tlv-eR-ZAa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yuf-7j-0IN" secondAttribute="bottom" id="uPU-93-BcD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scannedVinLabel" destination="4hg-eE-cST" id="QdQ-QC-OoB"/>
+                        <outlet property="scannerView" destination="OAk-gJ-gZ7" id="rLI-Zu-b9L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="357"/>
         </scene>
     </scenes>
 </document>
