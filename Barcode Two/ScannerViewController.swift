@@ -266,6 +266,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
         
         else if segue.identifier == "segueShowCarData" {
+            //self.dismissViewControllerAnimated(true, completion: nil)
             let carViewController = segue.destinationViewController as! CarViewController
             carViewController.vehicle = vehicle
         }
