@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB04A6851BCBFF830069BEA2 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB04A6841BCBFF830069BEA2 /* CarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DB04A6871BCC04DA0069BEA2 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB04A6861BCC04DA0069BEA2 /* Vehicle.swift */; settings = {ASSET_TAGS = (); }; };
 		DB4D1ACF1BC218AE001F8B87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1ACE1BC218AE001F8B87 /* AppDelegate.swift */; };
 		DB4D1AD11BC218AE001F8B87 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D1AD01BC218AE001F8B87 /* ScannerViewController.swift */; };
 		DB4D1AD41BC218AE001F8B87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4D1AD21BC218AE001F8B87 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB04A6841BCBFF830069BEA2 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		DB04A6861BCC04DA0069BEA2 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		DB4D1ACB1BC218AE001F8B87 /* VIN Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4D1ACE1BC218AE001F8B87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB4D1AD01BC218AE001F8B87 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				DB4D1AD51BC218AE001F8B87 /* Assets.xcassets */,
 				DB4D1AD71BC218AE001F8B87 /* LaunchScreen.storyboard */,
 				DB4D1ADA1BC218AE001F8B87 /* Info.plist */,
+				DB04A6841BCBFF830069BEA2 /* CarViewController.swift */,
+				DB04A6861BCC04DA0069BEA2 /* Vehicle.swift */,
 			);
 			name = "VIN Scanner";
 			path = "Barcode Two";
@@ -264,6 +270,8 @@
 				DB4D1AD11BC218AE001F8B87 /* ScannerViewController.swift in Sources */,
 				DB4D1ACF1BC218AE001F8B87 /* AppDelegate.swift in Sources */,
 				DB4D1B081BC4598D001F8B87 /* HomeViewController.swift in Sources */,
+				DB04A6871BCC04DA0069BEA2 /* Vehicle.swift in Sources */,
+				DB04A6851BCBFF830069BEA2 /* CarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +416,7 @@
 				INFOPLIST_FILE = "Barcode Two/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.iphone.VIN-Scanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.iphone.setiyadi.VIN-Scanner";
 				PRODUCT_NAME = "VIN Scanner";
 			};
 			name = Debug;
@@ -420,7 +428,7 @@
 				INFOPLIST_FILE = "Barcode Two/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.iphone.VIN-Scanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.cio.be.iphone.setiyadi.VIN-Scanner";
 				PRODUCT_NAME = "VIN Scanner";
 			};
 			name = Release;

@@ -12,6 +12,8 @@ import UIKit
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    var vehicle = Vehicle()
+    var activityIndicator = UIActivityIndicatorView()
     
     @IBOutlet weak var scannedVinLabel: UILabel!
     @IBOutlet weak var scannerView: UIView!
@@ -131,6 +133,123 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     
+    @IBAction func didTapConfirmVIN(sender: UIBarButtonItem) {
+        self.activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        self.activityIndicator.center = self.view.center
+        //self.activityIndicator.backgroundColor = UIColor.blueColor()
+        self.activityIndicator.hidesWhenStopped = true
+        self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+        
+        self.view.addSubview(self.activityIndicator)
+        
+        self.activityIndicator.startAnimating()
+        
+        let urlPath = "https://api.edmunds.com/api/vehicle/v2/vins/\(scannedVinLabel.text!)?fmt=json&api_key=6hpb5wfpnzecnubrar58w5tv"
+        let url = NSURL(string: urlPath)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
+            
+            
+            if error != nil {
+                print("getCarInfo - error: \(error)")
+            }
+            else {
+                
+                if data != nil {
+                    let jsonResult = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
+                    
+                    if let status = jsonResult["status"] as? String {
+                        print("VIN: \(status)")
+                    }
+                    else {
+                        /*
+                        var image: UIImage?
+                        var drivenWheels: String = ""
+                        var numOfDoors: Int?
+                        var mpg: Dictionary<String, String>?
+                        var transmissionType: String?
+                        var totalValves: Int = 0
+                        var cylinder: Int = 0
+                        var horsepower: Int = 0
+                        var type: String = ""
+                        var vehicleStyle: String = ""
+                        */
+                        
+                        // VIN
+                        self.vehicle.setVin(jsonResult["vin"] as! String)
+                        
+                        // YEAR
+                        let arrYears = jsonResult["years"] as! NSArray
+                        self.vehicle.setYear(arrYears[0]["year"] as! Int)
+                        
+                        // MAKE
+                        self.vehicle.setMake((jsonResult["make"] as! NSDictionary)["name"] as! String)
+                        
+                        // MODEL
+                        self.vehicle.setModel((jsonResult["model"] as! NSDictionary)["name"] as! String)
+                        
+                        // DRIVENWHEELS
+                        self.vehicle.setDrivenWheels(jsonResult["drivenWheels"] as! String)
+                        
+                        // DOORS
+                        self.vehicle.setNumOfDoors(Int(jsonResult["numOfDoors"] as! String)!)
+                        
+                        // MPG
+                        self.vehicle.setMpgCity(Int((jsonResult["MPG"] as! NSDictionary)["city"] as! String)!)
+                        self.vehicle.setMpgHighway(Int((jsonResult["MPG"] as! NSDictionary)["highway"] as! String)!)
+                        
+                        // TRANSMISSION TYPE
+                        self.vehicle.setTransmissionType((jsonResult["transmission"] as! NSDictionary)["transmissionType"] as! String)
+                        
+                        // TOTAL VALVES
+                        self.vehicle.setTotalValves((jsonResult["engine"] as! NSDictionary)["totalValves"] as! Int)
+                        
+                        // CYLINDER
+                        self.vehicle.setCylinder((jsonResult["engine"] as! NSDictionary)["cylinder"] as! Int)
+                        
+                        // HORSEPOWER
+                        self.vehicle.setHorsepower((jsonResult["engine"] as! NSDictionary)["horsepower"] as! Int)
+                        
+                        // TYPE
+                        self.vehicle.setType((jsonResult["engine"] as! NSDictionary)["type"] as! String)
+                        
+                        // VEHICLE STYLE
+                        self.vehicle.setVehicleStyle((jsonResult["categories"] as! NSDictionary)["vehicleStyle"] as! String)
+                        
+                        //let car_model = jsonResult["model"] as! NSDictionary
+                        //let car_makeModel = (jsonResult["model"] as! NSDictionary)["id"] as! String
+                        
+                        /*if let currentVehicle = self.vehicle {
+                        let vehicleArray = [self.vehicle]
+                        let vehicleData = NSKeyedArchiver.archivedDataWithRootObject(vehicleArray)
+                        NSUserDefaults.standardUserDefaults().setObject(vehicleData, forKey: Asset.USER_DEFAULT_KEY_VEHICLE_ARRAY)
+                        }*/
+                        //println(car_makeModel)
+                        
+                        //self.vinLabel.text = vehicle.getVin()
+                        //self.carMakeModelLabel.text = "\(vehicle.getMake()) \(vehicle.getModel())"
+                        
+                        self.activityIndicator.stopAnimating()
+                        self.performSegueWithIdentifier("segueShowCarData", sender: self)
+                        
+                    }
+                }
+                else {
+                    print("data: \(data)")
+                }
+            }
+            
+        })
+        
+        task.resume()
+    }
+    
+    func parseCarData(data: NSDictionary, section: String) -> String {
+        let result = data[section] as! String
+        
+        return result
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -144,6 +263,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if segue.identifier == "segueUnwindFromScanner" {
             let homeController = segue.destinationViewController as! HomeViewController
             homeController.scannedVin = scannedVinLabel.text!
+        }
+        
+        else if segue.identifier == "segueShowCarData" {
+            let carViewController = segue.destinationViewController as! CarViewController
+            carViewController.vehicle = vehicle
         }
     }
 }
