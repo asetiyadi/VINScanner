@@ -20,8 +20,10 @@ class CarViewController: UIViewController {
     @IBOutlet weak var vehicleModelLabel: UILabel!
     @IBOutlet weak var vehicleDrivenWheelsLabel: UILabel!
     @IBOutlet weak var vehicleNumOfDoorsLabel: UILabel!
-    @IBOutlet weak var vehicleMpgHighwayLabel: UILabel!
+    @IBOutlet weak var vehicleMpgHwyLabel: UILabel!
     @IBOutlet weak var vehicleMpgCityLabel: UILabel!
+
+  
     @IBOutlet weak var vehicleTransmissionTypeLabel: UILabel!
     @IBOutlet weak var vehicleValvesLabel: UILabel!
     @IBOutlet weak var vehicleCylinderLabel: UILabel!
@@ -31,25 +33,13 @@ class CarViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("myvehicle: \(vehicle)")
         // Do any additional setup after loading the view.
         
-        vehicleVinLabel.text = vehicle!.getVin()
-        vehicleYearLabel.text = String(vehicle!.getYear())
-        vehicleMakeLabel.text = vehicle!.getMake()
-        vehicleModelLabel.text = vehicle!.getModel()
-        vehicleDrivenWheelsLabel.text = vehicle!.getDrivenWheels()
-        vehicleNumOfDoorsLabel.text = String(vehicle!.getNumOfDoors())
-        vehicleMpgHighwayLabel.text = String(vehicle!.getMpgHighway())
-        vehicleMpgCityLabel.text = String(vehicle!.getMpgCity())
-        vehicleTransmissionTypeLabel.text = vehicle!.getTransmissionType()
-        vehicleValvesLabel.text = String(vehicle!.getTotalValves())
-        vehicleCylinderLabel.text = String(vehicle!.getCylinder())
-        vehicleHorsepowerLabel.text = String(vehicle!.getHorsepower())
-        vehicleTypeLabel.text = vehicle!.getType()
-        vehicleStyleLabel.text = vehicle!.getVehicleStyle()
+        loadVehicleInfo()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +47,24 @@ class CarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func loadVehicleInfo() {
+        vehicleVinLabel.text = vehicle!.getVin()
+        vehicleYearLabel.text = String(vehicle!.getYear())
+        vehicleMakeLabel.text = vehicle!.getMake()
+        vehicleModelLabel.text = vehicle!.getModel()
+        vehicleDrivenWheelsLabel.text = vehicle!.getDrivenWheels()
+        vehicleNumOfDoorsLabel.text = String(vehicle!.getNumOfDoors())
+        vehicleMpgHwyLabel.text = String(vehicle!.getMpgHighway())
+        vehicleMpgCityLabel.text = String(vehicle!.getMpgCity())
+        vehicleTransmissionTypeLabel.text = vehicle!.getTransmissionType()
+        vehicleValvesLabel.text = String(vehicle!.getTotalValves())
+        vehicleCylinderLabel.text = String(vehicle!.getCylinder())
+        vehicleHorsepowerLabel.text = String(vehicle!.getHorsepower())
+        vehicleTypeLabel.text = vehicle!.getType()
+        vehicleStyleLabel.text = vehicle!.getVehicleStyle()
+        
+        
+    }
 
     /*
     // MARK: - Navigation
